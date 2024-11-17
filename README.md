@@ -24,8 +24,8 @@ RSA_PUBLIC_KEY_PATH='rsa_keys/public.pem'
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com.....
-cd "Auth Api"
+git clone https://github.com/St-Luciferr/FastApi-JWT-Authentication
+cd "FastApi-JWT-Authentication"
 ```
 
 ### 2. Create Virtual Environment
