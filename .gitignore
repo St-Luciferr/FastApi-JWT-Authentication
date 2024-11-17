@@ -1,0 +1,4 @@
+.venv
+rsa_keys/*
+test.txt
+.env
