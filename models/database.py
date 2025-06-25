@@ -10,10 +10,13 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Access the database URL
-DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./test.db")
 
 # SQLAlchemy Database setup
-engine = create_engine(DATABASE_URL) 
+engine = create_engine(
+    DATABASE_URL, connect_args={"check_same_thread": False}
+)
+
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 def get_db():
