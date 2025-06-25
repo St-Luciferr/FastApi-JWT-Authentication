@@ -24,8 +24,8 @@ try:
         public_key = public_key_file.read()
 except FileNotFoundError as e:
     print(f"Error reading key files: {e}")
-    private_key = ""
-    public_key = ""
+    private_key = "no private key found"
+    public_key = "no public key found"
 
 
 class Settings(BaseModel):
