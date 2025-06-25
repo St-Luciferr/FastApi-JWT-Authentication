@@ -2,6 +2,9 @@
 
 This project implements JWT authentication using RSA key pair for signing and verifying tokens. It uses FastAPI for the backend and SQLAlchemy for database interaction.
 
+[![Deploy](https://img.shields.io/badge/View%20App-Demo-yellow
+)](https://fastapi-auth-production-7044.up.railway.app/docs)
+
 ## Prerequisites
 
 Make sure you have the following installed:
@@ -71,3 +74,4 @@ With the virtual environment activated and dependencies installed, you can run t
 ```bash
 uvicorn main:app --reload
 ```
+
