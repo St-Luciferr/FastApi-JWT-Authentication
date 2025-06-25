@@ -16,11 +16,16 @@ REFRESH_TOKEN_EXPIRE_DAYS = 7
 
 PRIVATE_KEY_PATH = os.path.join(BASE_PATH, RSA_PRIVATE_KEY_PATH)
 PUBLIC_KEY_PATH = os.path.join(BASE_PATH, RSA_PUBLIC_KEY_PATH)
-with open(PRIVATE_KEY_PATH, "r") as private_key_file:
-    private_key = private_key_file.read()
+try:
+    with open(PRIVATE_KEY_PATH, "r") as private_key_file:
+        private_key = private_key_file.read()
 
-with open(PUBLIC_KEY_PATH, "r") as public_key_file:
-    public_key = public_key_file.read()
+    with open(PUBLIC_KEY_PATH, "r") as public_key_file:
+        public_key = public_key_file.read()
+except FileNotFoundError as e:
+    print(f"Error reading key files: {e}")
+    private_key = ""
+    public_key = ""
 
 
 class Settings(BaseModel):
